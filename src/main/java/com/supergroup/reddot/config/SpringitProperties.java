@@ -8,6 +8,10 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 @ConfigurationProperties("springit")
 public class SpringitProperties {
 
+    /**
+     * Welcome message this is(Master YOda)
+     */
+
     private String welcomeMsg = "Hi Guys!";
 
 
