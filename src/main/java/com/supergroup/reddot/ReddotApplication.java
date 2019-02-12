@@ -7,23 +7,24 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Profile;
 
 @SpringBootApplication
 @EnableConfigurationProperties(SpringitProperties.class)
 public class ReddotApplication {
 
 
-    @Autowired
-    private SpringitProperties springitProperties;
+
 
     public static void main(String[] args) {
         SpringApplication.run(ReddotApplication.class, args);
     }
 
     @Bean
+    @Profile("dev")
     CommandLineRunner runner(){
         return args -> {
-          System.out.println("Welcome Message is " + springitProperties.getWelcomeMsg());
+          System.out.println("Dev profile ");
         };
     }
 
