@@ -22,5 +22,7 @@ public class Link {
     @NonNull
     private String url;
 
+    //comment
+
 
 }
