@@ -1,7 +1,7 @@
-package com.supergroup.reddot.model;
+package com.supergroup.reddot.domain;
 
 
-import lombok.Data;
+import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,6 +9,7 @@ import javax.persistence.Id;
 
 @Entity
 @Data
+@NoArgsConstructor
 public class Link {
 
     //represent table in db
@@ -16,7 +17,9 @@ public class Link {
     @Id
     @GeneratedValue
     private Long id;
+    @NonNull
     private String title;
+    @NonNull
     private String url;
 
 
